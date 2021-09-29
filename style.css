@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Raleway Regular", arial;
+}
+
+ul,
+li {
+  list-style-type: none;
+  /*background-color: black;*/
+}
+i {
+  color: #0065fc;
+}
+
+.section1 {
+  width: auto;
+  height: 50px;
+  border: 10px black;
+}
+.carte {
+}
+.carte1 {
+  border: 5px black;
+}
