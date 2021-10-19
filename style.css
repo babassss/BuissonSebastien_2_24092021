@@ -98,24 +98,15 @@ body {
   font-family: "Raleway Regular", arial;
 }
 h1,
-h2,
 h3,
 h4,
 h5 {
   width: auto;
-} /*
+  margin: 35px 15px 15px 30px;
+}
 h2 {
-  width: auto;
+  margin: 35px 15px 15px 40px;
 }
-h3 {
-  width: auto;
-}
-h4 {
-  width: auto;
-}
-h5 {
-  width: auto;
-}*/
 #container {
   display: grid;
   flex-direction: row;
@@ -130,26 +121,28 @@ h5 {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 80%;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.section2 {
+/*.section2 {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
+}*/
 .marseille {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 90%;
   background-color: #f2f2f2;
   border-radius: 10px;
 }
 .populaire {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 70%;
+  height: 90%;
   background-color: #f2f2f2;
   border-radius: 20px;
 }
@@ -164,8 +157,8 @@ h5 {
   display: flex;
   flex-direction: row;
   background-color: white;
-  width: 90%;
-  height: 30%;
+  width: 80%;
+  height: 24%;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
@@ -181,33 +174,39 @@ h5 {
 }
 .carte_pop {
   border-radius: 10px 0 0 10px;
+  /*margin: 5px;*/
+  width: 55%;
+  height: 95%;
 }
 .carte_mars {
   border-radius: 10px 10px 0 0;
-  width: 190px;
-  height: 40%;
+  width: 95%;
+  height: 100%;
   margin: 5px;
+  align-self: center;
 }
 .cartedescription {
   display: grid;
-  /* flex-direction: column;*/
-  align-self: center;
+  align-self: flex-start;
   grid-template-rows: 40px 20px;
   align-items: center;
   width: 200px;
+  padding: 10px;
 }
 .carte_image {
   display: flex;
   background-color: white;
   border-radius: 15%;
-  flex-direction: column;
-  height: 150px;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
   width: 100%;
+  margin: 5px;
 }
 .carte1 {
   display: flex;
-  width: 30%;
-  height: 30%;
+  width: 28%;
+  height: 40%;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: space-around;
@@ -217,14 +216,14 @@ h5 {
 .carte_image1 {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 95%;
   background-color: white;
   border-radius: 15%;
 }
 .container_carte1 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   /*background-color: white;*/
   width: 100%;
@@ -238,7 +237,7 @@ h5 {
   color: black;
 }*/
 i {
-  background-color: #deebff;
+  /*background-color: #deebff;*/
   display: flex;
   flex-direction: row;
   width: 20px;
