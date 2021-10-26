@@ -1,6 +1,6 @@
 .nav {
   grid-area: nav;
-  width: auto;
+  width: 100%;
   display: flex;
   /*flex-direction: row;*/
   align-items: flex-start;
@@ -25,14 +25,6 @@
 .box:nth-of-type(4) {
   order: 3;
 }
-img {
-  width: 100px;
-  height: 100px;
-}
-/*.imgcarte{
-  width: 50px;
-  height: 50px;
-}*/
 .filtres {
   display: flex;
   justify-content: flex-start;
@@ -71,38 +63,57 @@ img {
   align-items: center;
   justify-content: flex-start;
 }
-/*.logo {
-  width: 50px;
+.logo {
+  width: 100px;
   height: 50px;
-}*/
+}
 body {
   text-decoration: none;
   background-color: rgb(255, 255, 255);
   font-family: "Raleway Regular", arial;
 }
-h1,
-h3,
-h4,
-h5 {
+h1 {
   width: auto;
   margin: 35px 15px 15px 30px;
 }
 h2 {
-  margin: 35px 15px 15px 40px;
+  margin: 35px 15px 15px 20px;
+  height: 16px;
 }
+h3 {
+  width: auto;
+  /*margin: 35px 15px 15px 30px;*/
+  margin-left: 0px;
+  margin-bottom: 25px;
+}
+h4,
+h5,
+h6 {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+/*h5 {
+  margin-top: 50px;
+  font-size: 20px;
+}
+h6 {
+  margin-top: 50px;
+  font-size: 20px;
+}*/
 #container {
   display: grid;
   align-items: flex-start;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 110px 220px 800px 500px;
+  grid-template-rows: 110px 220px 700px 680px;
   grid-template-areas:
     "nav nav nav"
     "sectionrecherche sectionrecherche sectionrecherche"
     "sectionmarseille sectionmarseille sectionpopu"
     "sectionactivite sectionactivite sectionactivite";
   grid-column-gap: 40px;
-  margin-left: 64px;
-  margin-right: 64px;
+  margin-left: 45px;
+  margin-right: 45px;
 }
 .container_carte {
   display: flex;
@@ -117,7 +128,7 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 90%;
+  height: 95%;
   background-color: #f2f2f2;
   border-radius: 10px;
 }
@@ -126,9 +137,18 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 90%;
+  height: 95%;
   background-color: #f2f2f2;
   border-radius: 20px;
+}
+.popu {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.popu i {
+  color: black;
+  font-size: 20px;
 }
 .activite {
   grid-area: sectionactivite;
@@ -142,15 +162,22 @@ h2 {
   display: flex;
   flex-direction: row;
   background-color: white;
-  width: 80%;
+  width: 85%;
   height: 24%;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
 }
+.carte i {
+  margin-top: 18px;
+} /*
+.carte p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}*/
 .carte_pop {
   border-radius: 10px 0 0 10px;
-  width: 55%;
+  width: 70%;
   height: 95%;
 }
 .carte_mars {
@@ -162,10 +189,30 @@ h2 {
 }
 .cartedescription {
   display: grid;
+  align-self: normal;
+  grid-template-rows: 20px 20px;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  padding: 10px;
+  margin-left: 10px;
+}
+.etoiles {
+  display: flex;
+}
+/*.etoilegrise {
+  color: grey;
+}*/
+.etoilegrise i {
+  color: #f2f2f2;
+}
+.cartedescriptionpop {
+  display: grid;
   align-self: flex-start;
   grid-template-rows: 40px 20px;
   align-items: center;
-  width: 200px;
+  width: 100%;
+  height: 100%;
   padding: 10px;
 }
 .carte_image {
@@ -181,17 +228,20 @@ h2 {
 .carte1 {
   display: flex;
   width: 28%;
-  height: 40%;
+  height: 45%;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: space-around;
   background-color: white;
   border-radius: 15px;
 }
+.carte1 i {
+  margin-top: 10px;
+}
 .carte_image1 {
   display: flex;
   flex-direction: column;
-  height: 95%;
+  height: 100%;
   background-color: white;
   border-radius: 15%;
 }
@@ -205,7 +255,7 @@ h2 {
   border-radius: 15%;
 }
 .afficher {
-  margin: 35px 15px 15px 30px;
+  margin: 0px 15px 15px 30px;
 }
 .container_carte2 {
   display: grid;
@@ -217,70 +267,75 @@ h2 {
     "vieuxporc frioul calanque longchamp";
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  height: 45%;
+  height: 68%;
 }
 .cartevieuxporc {
   grid-area: vieuxporc;
   width: 100%;
+  height: 90%;
 }
 .cartepomegue {
   grid-area: pomegue;
+  height: 93%;
 }
 .cartefrioul {
   grid-area: frioul;
+  height: 79%;
 }
 .cartecalanque {
   grid-area: calanque;
+  height: 90%;
 }
 .cartenotredame {
   grid-area: notredame;
+  height: 90%;
 }
 .cartelongchamp {
   grid-area: longchamp;
+  height: 80%;
 }
 .carte_image2 {
   height: 100%;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px 20px 20px 20px;
 }
 .cartedescriptionacti {
   padding: 10px;
   height: 10%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-left: 15px;
 }
 .carte_activp {
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   width: 100%;
-  height: 85%;
+  height: 90%;
 }
 .carte_actipo {
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   width: 100%;
   height: 80%;
 }
 .carte_actifr {
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   width: 100%;
+  height: 75%;
 }
 .carte_actica {
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   width: 100%;
-  height: 85%;
+  height: 90%;
 }
 .carte_actind {
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   width: 100%;
+  height: 75%;
 }
 .carte_actilc {
-  border-radius: 10px 10px 0 0;
+  border-radius: 20px 20px 0 0;
   width: 100%;
+  height: 79%;
 }
-/*.plus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-}*/
 i {
   display: flex;
   flex-direction: row;
@@ -290,16 +345,51 @@ i {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 .footer {
   grid-area: footer;
   background-color: #f2f2f2;
   display: flex;
-  width: auto;
+  width: 100%;
   flex-direction: row;
   text-align: left;
-  justify-content: space-around;
   list-style-type: none;
   text-decoration: none;
-  /*align-items: center;*/
+}
+.propos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 275px;
+}
+.propos li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.propos ul {
+  padding-left: 0px;
+}
+.heber {
+  display: flex;
+  flex-direction: column;
+  margin-right: 275px;
+}
+.heber li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.heber ul {
+  padding-left: 0px;
+}
+.assistance {
+  display: flex;
+  flex-direction: column;
+}
+.assistance li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.assistance ul {
+  padding-left: 0px;
 }
