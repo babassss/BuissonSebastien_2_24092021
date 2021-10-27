@@ -28,7 +28,7 @@
 .filtres {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
 }
 .billet,
@@ -111,7 +111,7 @@ h6 {
     "sectionrecherche sectionrecherche sectionrecherche"
     "sectionmarseille sectionmarseille sectionpopu"
     "sectionactivite sectionactivite sectionactivite";
-  grid-column-gap: 40px;
+  /*grid-column-gap: 30px;*/
   margin-left: 45px;
   margin-right: 45px;
 }
@@ -127,7 +127,7 @@ h6 {
   grid-area: sectionmarseille;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 97%;
   height: 95%;
   background-color: #f2f2f2;
   border-radius: 10px;
@@ -162,8 +162,8 @@ h6 {
   display: flex;
   flex-direction: row;
   background-color: white;
-  width: 85%;
-  height: 24%;
+  width: 82%;
+  height: 25%;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
@@ -228,7 +228,7 @@ h6 {
 .carte1 {
   display: flex;
   width: 28%;
-  height: 45%;
+  height: 40%;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: space-around;
@@ -241,7 +241,7 @@ h6 {
 .carte_image1 {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 90%;
   background-color: white;
   border-radius: 15%;
 }
@@ -265,7 +265,7 @@ h6 {
     "vieuxporc pomegue calanque notredame"
     "vieuxporc pomegue calanque longchamp"
     "vieuxporc frioul calanque longchamp";
-  grid-column-gap: 20px;
+  grid-column-gap: 30px;
   grid-row-gap: 20px;
   height: 68%;
 }
