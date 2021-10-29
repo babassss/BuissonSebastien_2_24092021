@@ -1,20 +1,32 @@
-.nav {
+/***********************************************
+*******************BODY*************************
+***********************************************/
+body {
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  font-family: "Raleway Regular", arial;
+}
+/*************************************
+****************NAV*******************
+***********************************/
+nav {
+  grid-area: nav;
+}
+nav ul {
   grid-area: nav;
   width: 100%;
   display: flex;
-  /*flex-direction: row;*/
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-around;
   list-style-type: none;
+  padding-left: 0px;
 }
-.section1 {
-  grid-area: sectionrecherche;
-}
-.rechercher {
-  display: flex;
-}
+/*nav ul li {
+  padding: 0 40px;
+}*/
 .box:nth-of-type(1) {
   order: 1;
+  margin-right: auto;
 }
 .box:nth-of-type(2) {
   order: 4;
@@ -25,53 +37,104 @@
 .box:nth-of-type(4) {
   order: 3;
 }
+/*********************************
+*******sectionrecherche***********
+*********************************/
+.sectionrecherche {
+  grid-area: sectionrecherche;
+}
+.rechercher {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  width: 28%;
+}
+.rechercher i {
+  color: black;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.localisation {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  height: 22px;
+}
+form {
+  width: 90%;
+  margin: auto;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.formu {
+  display: flex;
+}
+input {
+  padding: 4px 10px;
+  border: 0;
+  font-size: 16px;
+}
+.submit {
+  width: 100px;
+  background-color: #0065fc;
+  color: white;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-radius: 0px 10px 10px 0px;
+}
+.search {
+  width: 80%;
+  padding-left: 0;
+  padding-right: 0;
+}
 .filtres {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  margin-top: 30px;
+  font-size: 20px;
 }
-.billet,
-.child,
-.coeur,
-.chien {
-  width: 110px;
-  height: 17px;
+.choix_filtres {
+  width: auto;
+  height: 25px;
   border: 1px solid #f2f2f2;
   border-radius: 55px 55px;
-  padding: 10px 20px 10px 10px;
+  padding: 10px 20px 10px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 30px;
+}
+.choix_filtres p {
+  margin-left: 10px;
+}
+.filtres i {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
 }
 .cercle {
   background-color: #deebff;
   padding: 10px;
   border-radius: 50%;
-  align-items: center;
-}
-.child {
-  width: 100px;
-  padding: 10px 10px 10px 0px;
-}
-.chien {
-  width: 168px;
-  padding: 10px 20px 10px 0px;
+  height: 20px;
+  /* align-items: center;*/
 }
 .info {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: flex-start;
 }
 .logo {
   width: 100px;
   height: 50px;
 }
-body {
-  text-decoration: none;
-  background-color: rgb(255, 255, 255);
-  font-family: "Raleway Regular", arial;
-}
+/*********************************
+************TITRE****************
+********************************/
 h1 {
   width: auto;
   margin: 35px 15px 15px 30px;
@@ -82,7 +145,6 @@ h2 {
 }
 h3 {
   width: auto;
-  /*margin: 35px 15px 15px 30px;*/
   margin-left: 0px;
   margin-bottom: 25px;
 }
@@ -93,25 +155,18 @@ h6 {
   margin-bottom: 0px;
   font-size: 20px;
 }
-/*h5 {
-  margin-top: 50px;
-  font-size: 20px;
-}
-h6 {
-  margin-top: 50px;
-  font-size: 20px;
-}*/
+/*********************************************************
+*******************IDCONTAINER***************************
+********************************************************/
 #container {
   display: grid;
-  align-items: flex-start;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 110px 220px 700px 680px;
+  grid-template-rows: 100px 300px 700px 680px;
   grid-template-areas:
     "nav nav nav"
     "sectionrecherche sectionrecherche sectionrecherche"
     "sectionmarseille sectionmarseille sectionpopu"
     "sectionactivite sectionactivite sectionactivite";
-  /*grid-column-gap: 30px;*/
   margin-left: 45px;
   margin-right: 45px;
 }
@@ -155,14 +210,12 @@ h6 {
   display: grid;
   width: 100%;
   height: 100%;
-  /*background-color: blue;
-  /*float: left;*/
 }
 .carte {
   display: flex;
   flex-direction: row;
   background-color: white;
-  width: 82%;
+  width: 87%;
   height: 25%;
   border-radius: 15px;
   justify-content: center;
@@ -170,11 +223,7 @@ h6 {
 }
 .carte i {
   margin-top: 18px;
-} /*
-.carte p {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}*/
+}
 .carte_pop {
   border-radius: 10px 0 0 10px;
   width: 70%;
@@ -200,9 +249,6 @@ h6 {
 .etoiles {
   display: flex;
 }
-/*.etoilegrise {
-  color: grey;
-}*/
 .etoilegrise i {
   color: #f2f2f2;
 }
@@ -257,6 +303,9 @@ h6 {
 .afficher {
   margin: 0px 15px 15px 30px;
 }
+/****************************************************
+******************ACTIVITES**************************
+****************************************************/
 .container_carte2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -271,7 +320,6 @@ h6 {
 }
 .cartevieuxporc {
   grid-area: vieuxporc;
-  width: 100%;
   height: 90%;
 }
 .cartepomegue {
@@ -345,8 +393,11 @@ i {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #0065fc;
 }
+/***********************************************
+**********************FOOTER********************
+***********************************************/
 .footer {
   grid-area: footer;
   background-color: #f2f2f2;
