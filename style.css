@@ -1,10 +1,14 @@
 /***********************************************
 *******************BODY*************************
 ***********************************************/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
   text-decoration: none;
   background-color: rgb(255, 255, 255);
-  font-family: "Raleway Regular", arial;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  margin: 0;
 }
 /*************************************
 ****************NAV*******************
@@ -15,15 +19,34 @@ nav {
 nav ul {
   grid-area: nav;
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
   list-style-type: none;
   padding-left: 0px;
+  margin: 0;
 }
-/*nav ul li {
+nav li {
+  height: 100%;
+}
+nav a {
   padding: 0 40px;
-}*/
+  height: 100%;
+  display: inline-block;
+  padding-top: 40px;
+}
+nav a:hover {
+  border-top: 5px solid #0065fc;
+  color: #0065fc;
+}
+#logo {
+  padding: 30px 0 0;
+}
+#logo:hover {
+  border-top: none;
+}
+
 .box:nth-of-type(1) {
   order: 1;
   margin-right: auto;
@@ -37,6 +60,10 @@ nav ul {
 .box:nth-of-type(4) {
   order: 3;
 }
+.sinscrire {
+  font-weight: bold;
+  color: #0065fc;
+}
 /*********************************
 *******sectionrecherche***********
 *********************************/
@@ -47,23 +74,26 @@ nav ul {
   display: flex;
   align-items: center;
   border: 1px solid #f2f2f2;
-  border-radius: 10px;
-  width: 28%;
+  border-radius: 20px;
+  width: 24%;
 }
 .rechercher i {
   color: black;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 .localisation {
   background-color: #f2f2f2;
   padding: 10px;
-  border-radius: 10px 0 0 10px;
-  height: 22px;
+  border-radius: 20px 0 0 20px;
+  height: 40px;
+  width: 40px;
 }
 form {
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding-left: 0px;
   margin-left: 0px;
@@ -76,19 +106,26 @@ input {
   padding: 4px 10px;
   border: 0;
   font-size: 16px;
+  margin-left: 5px;
 }
 .submit {
-  width: 100px;
+  width: 50%;
   background-color: #0065fc;
   color: white;
   padding-top: 11px;
   padding-bottom: 11px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 20px 20px 0px;
+  height: 60px;
+  font-weight: bold;
 }
 .search {
   width: 80%;
-  padding-left: 0;
-  padding-right: 0;
+  /*padding-left: 0;*/
+  /*padding-right: 0;*/
+}
+::placeholder {
+  opacity: 1;
+  font-weight: bold;
 }
 .filtres {
   display: flex;
@@ -99,7 +136,7 @@ input {
 }
 .choix_filtres {
   width: auto;
-  height: 25px;
+  height: 30px;
   border: 1px solid #f2f2f2;
   border-radius: 55px 55px;
   padding: 10px 20px 10px 0px;
@@ -107,9 +144,25 @@ input {
   align-items: center;
   justify-content: center;
   margin-left: 30px;
+  font-weight: bold;
 }
 .choix_filtres p {
   margin-left: 10px;
+}
+/*.choix_filtres :hover {
+  color: white;
+  background-color: #0065fc;
+}*/
+/*.choix_filtres:hover,
+.choix_filtres:hover cercle {
+  color: white;
+  background-color: #0065fc;
+}*/
+.choix_filtres:hover,
+.choix_filtres:hover .cercle,
+.choix_filtres:hover i {
+  color: white;
+  background-color: #0065fc;
 }
 .filtres i {
   display: flex;
@@ -118,7 +171,7 @@ input {
 }
 .cercle {
   background-color: #deebff;
-  padding: 10px;
+  padding: 15px;
   border-radius: 50%;
   height: 20px;
   /* align-items: center;*/
@@ -137,10 +190,13 @@ input {
 ********************************/
 h1 {
   width: auto;
-  margin: 35px 15px 15px 30px;
+  margin: 25px 15px 15px 30px;
 }
 h2 {
-  margin: 35px 15px 15px 20px;
+  margin-left: 7%;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 0px;
   height: 16px;
 }
 h3 {
@@ -161,12 +217,13 @@ h6 {
 #container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 300px 700px 680px;
+  grid-template-rows: 100px 350px 700px 750px 195px;
   grid-template-areas:
     "nav nav nav"
     "sectionrecherche sectionrecherche sectionrecherche"
     "sectionmarseille sectionmarseille sectionpopu"
-    "sectionactivite sectionactivite sectionactivite";
+    "sectionactivite sectionactivite sectionactivite"
+    "footer footer footer";
   margin-left: 45px;
   margin-right: 45px;
 }
@@ -176,23 +233,23 @@ h6 {
   width: 100%;
   height: 80%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .marseille {
   grid-area: sectionmarseille;
   display: flex;
   flex-direction: column;
   width: 97%;
-  height: 95%;
+  height: 100%;
   background-color: #f2f2f2;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .populaire {
   grid-area: sectionpopu;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 95%;
+  height: 100%;
   background-color: #f2f2f2;
   border-radius: 20px;
 }
@@ -202,6 +259,7 @@ h6 {
   justify-content: space-around;
 }
 .popu i {
+  margin-right: 30px;
   color: black;
   font-size: 20px;
 }
@@ -215,39 +273,48 @@ h6 {
   display: flex;
   flex-direction: row;
   background-color: white;
-  width: 87%;
+  width: 78%;
   height: 25%;
-  border-radius: 15px;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
+  border: 5px solid white;
 }
 .carte i {
   margin-top: 18px;
 }
 .carte_pop {
-  border-radius: 10px 0 0 10px;
-  width: 70%;
-  height: 95%;
+  border-radius: 20px 0 0 20px;
+  width: 50%;
+  height: 100%;
+  scale: 1.1;
 }
 .carte_mars {
-  border-radius: 10px 10px 0 0;
-  width: 95%;
-  height: 100%;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 70%;
   margin: 5px;
   align-self: center;
+  scale: 1.1;
 }
 .cartedescription {
   display: grid;
   align-self: normal;
-  grid-template-rows: 20px 20px;
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
-  width: 100%;
-  height: 25%;
+  width: 90%;
+  height: 30%;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 5px;
+}
+.cartedescription p {
+  margin: 0;
 }
 .etoiles {
   display: flex;
+  width: 80%;
+  height: 100%;
+  font-size: 80%;
 }
 .etoilegrise i {
   color: #f2f2f2;
@@ -255,21 +322,25 @@ h6 {
 .cartedescriptionpop {
   display: grid;
   align-self: flex-start;
-  grid-template-rows: 40px 20px;
-  align-items: center;
-  width: 100%;
+  grid-template-rows: repeat(3, 1fr);
+  width: 55%;
   height: 100%;
-  padding: 10px;
+  padding: 15px 10px 15px 28px;
+  box-sizing: border-box;
+}
+.cartedescriptionpop p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .carte_image {
   display: flex;
   background-color: white;
-  border-radius: 15%;
+  border-radius: 20px;
   flex-direction: row;
   align-items: center;
   height: 100%;
   width: 100%;
-  margin: 5px;
+  overflow: hidden;
 }
 .carte1 {
   display: flex;
@@ -279,7 +350,8 @@ h6 {
   flex-direction: column;
   align-content: space-around;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 20px;
+  border: 5px solid white;
 }
 .carte1 i {
   margin-top: 10px;
@@ -287,9 +359,10 @@ h6 {
 .carte_image1 {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   background-color: white;
-  border-radius: 15%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .container_carte1 {
   display: flex;
@@ -301,7 +374,8 @@ h6 {
   border-radius: 15%;
 }
 .afficher {
-  margin: 0px 15px 15px 30px;
+  margin-left: 30px;
+  font-weight: bold;
 }
 /****************************************************
 ******************ACTIVITES**************************
@@ -311,15 +385,15 @@ h6 {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-    "vieuxporc pomegue calanque notredame"
-    "vieuxporc pomegue calanque longchamp"
-    "vieuxporc frioul calanque longchamp";
+    "vieuxport pomegue calanque notredame"
+    "vieuxport pomegue calanque longchamp"
+    "vieuxport frioul calanque longchamp";
   grid-column-gap: 30px;
   grid-row-gap: 20px;
   height: 68%;
 }
-.cartevieuxporc {
-  grid-area: vieuxporc;
+.cartevieuxport {
+  grid-area: vieuxport;
   height: 90%;
 }
 .cartepomegue {
@@ -348,10 +422,10 @@ h6 {
   border-radius: 20px 20px 20px 20px;
 }
 .cartedescriptionacti {
-  padding: 10px;
+  /*padding: 10px;*/
   height: 10%;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-left: 15px;
 }
 .carte_activp {
@@ -393,11 +467,14 @@ i {
 }
 a {
   text-decoration: none;
-  color: #0065fc;
+  color: black;
 }
 /***********************************************
 **********************FOOTER********************
 ***********************************************/
+.foot {
+  grid-area: footer;
+}
 .footer {
   grid-area: footer;
   background-color: #f2f2f2;
@@ -405,7 +482,7 @@ a {
   width: 100%;
   flex-direction: row;
   text-align: left;
-  list-style-type: none;
+  /*list-style-type: none;*/
   text-decoration: none;
 }
 .propos {
