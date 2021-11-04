@@ -13,8 +13,14 @@ body {
 /*************************************
 ****************NAV*******************
 ***********************************/
+header {
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 30px;
+  border-top: none;
+}
 nav {
-  grid-area: nav;
+  border-top: none;
 }
 nav ul {
   grid-area: nav;
@@ -34,7 +40,10 @@ nav a {
   padding: 0 40px;
   height: 100%;
   display: inline-block;
-  padding-top: 40px;
+  padding-top: 60px;
+  border-top: none;
+  padding-bottom: 17px;
+  margin-bottom: 20px;
 }
 nav a:hover {
   border-top: 5px solid #0065fc;
@@ -50,15 +59,19 @@ nav a:hover {
 .box:nth-of-type(1) {
   order: 1;
   margin-right: auto;
+  grid-area: logo;
 }
 .box:nth-of-type(2) {
   order: 4;
+  grid-area: sinscrire;
 }
 .box:nth-of-type(3) {
   order: 2;
+  grid-area: hebergement;
 }
 .box:nth-of-type(4) {
   order: 3;
+  grid-area: activite;
 }
 .sinscrire {
   font-weight: bold;
@@ -149,15 +162,6 @@ input {
 .choix_filtres p {
   margin-left: 10px;
 }
-/*.choix_filtres :hover {
-  color: white;
-  background-color: #0065fc;
-}*/
-/*.choix_filtres:hover,
-.choix_filtres:hover cercle {
-  color: white;
-  background-color: #0065fc;
-}*/
 .choix_filtres:hover,
 .choix_filtres:hover .cercle,
 .choix_filtres:hover i {
@@ -190,14 +194,17 @@ input {
 ********************************/
 h1 {
   width: auto;
-  margin: 25px 15px 15px 30px;
+  margin-left: 3%;
+  margin-top: 40px;
+  margin-bottom: 45px;
+  height: 27px;
 }
 h2 {
-  margin-left: 7%;
+  margin-left: 10%;
   margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 0px;
-  height: 16px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  height: 27px;
 }
 h3 {
   width: auto;
@@ -217,13 +224,11 @@ h6 {
 #container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 350px 700px 750px 195px;
+  grid-template-rows: 700px 700px;
   grid-template-areas:
-    "nav nav nav"
-    "sectionrecherche sectionrecherche sectionrecherche"
     "sectionmarseille sectionmarseille sectionpopu"
-    "sectionactivite sectionactivite sectionactivite"
-    "footer footer footer";
+    "sectionactivite sectionactivite sectionactivite";
+  grid-row-gap: 40px;
   margin-left: 45px;
   margin-right: 45px;
 }
@@ -231,7 +236,7 @@ h6 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 80%;
+  height: 72%;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -285,17 +290,19 @@ h6 {
 }
 .carte_pop {
   border-radius: 20px 0 0 20px;
-  width: 50%;
+  width: 36%;
   height: 100%;
-  scale: 1.1;
+  scale: 1.3;
+  object-fit: cover;
 }
 .carte_mars {
   border-radius: 20px 20px 0 0;
-  width: 100%;
+  width: 90%;
   height: 70%;
   margin: 5px;
   align-self: center;
   scale: 1.1;
+  object-fit: cover;
 }
 .cartedescription {
   display: grid;
@@ -432,11 +439,13 @@ h6 {
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 90%;
+  object-fit: cover;
 }
 .carte_actipo {
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 80%;
+  object-fit: cover;
 }
 .carte_actifr {
   border-radius: 20px 20px 0 0;
@@ -447,16 +456,18 @@ h6 {
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 90%;
+  object-fit: cover;
 }
 .carte_actind {
   border-radius: 20px 20px 0 0;
   width: 100%;
-  height: 75%;
+  height: 78%;
 }
 .carte_actilc {
   border-radius: 20px 20px 0 0;
   width: 100%;
   height: 79%;
+  object-fit: cover;
 }
 i {
   display: flex;
@@ -520,4 +531,239 @@ a {
 }
 .assistance ul {
   padding-left: 0px;
+}
+/*********************************************
+ ***********responsive*tablette**************
+*********************************************/
+
+@media screen and (min-width: 610px) and (max-width: 1080px) {
+  .rechercher {
+    width: 40%;
+    height: 40px;
+  }
+  .localisation {
+    height: 20px;
+    width: 20px;
+  }
+  .formu {
+    width: 280px;
+    height: 40px;
+  }
+  .submit {
+    height: 40px;
+  }
+
+  /**************************************
+  ****************filtres****************
+  **************************************/
+  .filtres {
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .choix_filtres {
+    height: 17px;
+  }
+  .cercle {
+    width: 7px;
+    height: 7px;
+  }
+  .cercle i {
+    justify-content: center;
+    padding-left: 1px;
+    align-items: center;
+    height: 5px;
+    width: 5px;
+  }
+  #container {
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-rows: 600px 400px 530px 250px;
+    grid-template-areas:
+      "sectionmarseille sectionmarseille sectionmarseille"
+      "sectionpopu sectionpopu sectionpopu"
+      "sectionactivite sectionactivite sectionactivite";
+  }
+  /*************************************
+  ************Marseille****************
+  *************************************/
+  .marseille {
+    height: 100%;
+  }
+  .container_carte {
+    font-size: 12px;
+  }
+  .carte_mars {
+    height: 57%;
+  }
+  .cartedescription {
+    justify-content: space-between;
+    margin-left: 0;
+    padding-top: 5px;
+  }
+  .carte1 {
+    height: 39%;
+    align-content: space-around;
+    border: 3px solid white;
+  }
+  .afficher {
+    height: 15px;
+  }
+  .afficher p {
+    margin-top: 0;
+  }
+  /*************************************
+  ***********Populaire*****************
+  *************************************/
+  .populaire {
+    height: 100%;
+  }
+  .popu {
+    height: 20%;
+  }
+  h2 {
+    width: auto;
+    margin-left: 3%;
+    margin-top: 40px;
+    margin-bottom: 45px;
+    height: 27px;
+  }
+  .container_carte1 {
+    font-size: 12px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70%;
+  }
+  .carte_pop {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 50%;
+  }
+  .cartedescriptionpop {
+    justify-content: space-between;
+    margin-left: 0;
+    height: 50%;
+    width: 100%;
+    padding-left: 15px;
+    padding-top: 20px;
+  }
+  .carte {
+    display: flex;
+    width: 28%;
+    height: 70%;
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid white;
+  }
+  .carte_image {
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    background-color: white;
+  }
+
+  /********************************************
+  *****************Activites*******************
+  *********************************************/
+  .container_carte2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 170px 150px 150px 170px;
+    grid-template-areas: "vieuxport pomegue" "vieuxport frioul" "notredame calanque" "longchamp calanque";
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    height: 68%;
+    font-size: 15px;
+  }
+  .cartevieuxport {
+    grid-area: vieuxport;
+    height: 99%;
+    width: 80%;
+    justify-content: space-around;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-left: 45px;
+  }
+  .cartepomegue {
+    grid-area: pomegue;
+    height: 100%;
+    width: 80%;
+    padding-left: 45px;
+  }
+  .cartefrioul {
+    grid-area: frioul;
+    height: 98%;
+    width: 80%;
+    padding-left: 45px;
+  }
+  .cartenotredame {
+    grid-area: notredame;
+    height: 98%;
+    width: 80%;
+    padding-left: 45px;
+  }
+  .cartecalanque {
+    grid-area: calanque;
+    height: 99%;
+    width: 80%;
+    justify-content: space-around;
+    display: flex;
+    padding-left: 45px;
+  }
+  .cartelongchamp {
+    grid-area: longchamp;
+    height: 97%;
+    width: 80%;
+    padding-left: 45px;
+  }
+  .cartedescriptionacti {
+    height: 20%;
+    margin-top: -10px;
+  }
+  /********************************************
+  ****************Footer***********************
+  ********************************************/
+  .foot {
+    height: 50%;
+    font-size: 12px;
+  }
+  .propos {
+    margin-right: 120px;
+  }
+  .heber {
+    margin-right: 120px;
+  }
+}
+
+/******************************************
+*************Response*mobile**************
+*****************************************/
+
+@media screen and (max-device-width: 609px) {
+  nav {
+    /*display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "logo sinscrire"
+      "hebergement activite";*/
+  }
+  .populaire {
+    height: 100%;
+  }
+  .container_carte1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .container_carte {
+    display: flex;
+    flex-direction: column;
+  }
+  .marseille {
+    height: 100%;
+  }
 }
