@@ -177,7 +177,7 @@ input {
 }
 .info {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
 }
 .info i {
@@ -303,9 +303,8 @@ h6 {
 }
 .carte_pop {
   border-radius: 20px 0 0 20px;
-  width: 36%;
+  width: 45%;
   height: 100%;
-  /*scale: 1.3;*/
   object-fit: cover;
 }
 .carte_mars {
@@ -607,6 +606,8 @@ a {
   }
   .carte_mars {
     height: 57%;
+    width: 98%;
+    margin-top: 2px;
   }
   .cartedescription {
     justify-content: space-between;
@@ -648,14 +649,15 @@ a {
     height: 70%;
   }
   .carte_pop {
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 0px 0px 20px;
     width: 100%;
-    height: 50%;
+    height: 97%;
+    margin-left: 3px;
   }
   .cartedescriptionpop {
     justify-content: space-between;
     margin-left: 0;
-    height: 50%;
+    height: 80%;
     width: 100%;
     padding-left: 15px;
     padding-top: 20px;
@@ -806,37 +808,78 @@ a {
     width: 100%;
     height: 70px;
   }
-  .rechercher i {
-  }
+  /*.rechercher i {
+  }*/
   .formu {
     width: 100%;
+    align-items: center;
   }
   .localisation {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
   }
   .localisation i {
     height: 50%;
     width: 50%;
   }
   input {
-    font-size: 50px;
+    font-size: 40px;
   }
   .submit {
     height: 40px;
     width: auto;
   }
-  .button {
-    height: 40px;
-    width: 40px;
+  ::placeholder {
+    font-weight: normal;
+  }
+  .search {
+    margin-left: 20px;
+    width: 85%;
+  }
+  .btn {
+    height: 70px;
+    width: 12%;
     background-color: #0065fc;
     border: 0;
-    line-height: 2.5;
+    /* line-height: 2.5;
     padding: 0 20px;
     font-size: 20px;
     text-align: center;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px #000;*/
     border-radius: 10px;
+  }
+  .rechercher i {
+    color: black;
+    display: flex;
+    margin-left: 10px;
+  }
+  #filtres {
+    width: 100%;
+    /*flex: 1 0 100%;*/
+    height: 76px;
+  }
+  .filtres {
+    height: 170px;
+  }
+  .filtres p {
+    font-size: 35px;
+  }
+  .cercle {
+    width: 30px;
+    height: 30px;
+  }
+  .cercle i {
+    justify-content: center;
+    padding-left: 5px;
+    align-items: baseline;
+    height: 5px;
+    width: 5px;
+    justify-content: space-between;
+    padding-top: 4px;
+  }
+  .choix_filtres {
+    height: 40px;
+    margin-left: 0;
   }
   /*****************************************************
   ***********************Container**********************
@@ -898,8 +941,8 @@ a {
     border-radius: 40px;
   }
   .carte_pop {
-    height: 98%;
-    width: 35%;
+    height: 96%;
+    width: 36%;
     border-radius: 40px 0px 0px 40px;
     object-fit: cover;
   }
@@ -949,8 +992,8 @@ a {
   }
   .carte_mars {
     height: 52%;
-    width: 88%;
-    padding-top: 15px;
+    width: 97%;
+    padding-top: 9px;
     border-radius: 40px 40px 0px 0px;
   }
   .cartedescription p {
@@ -1016,6 +1059,7 @@ a {
   }
   .carte_image2 {
     height: 100%;
+    width: 100%;
     border-radius: 40px;
   }
   /*****************************************************************
