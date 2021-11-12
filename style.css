@@ -127,6 +127,8 @@ input {
   height: 60px;
   font-weight: bold;
   font-size: 16px;
+  display: flex;
+  align-items: center;
 }
 .btn p {
   display: flex;
@@ -444,7 +446,6 @@ h6 {
   border-radius: 20px 20px 20px 20px;
 }
 .cartedescriptionacti {
-  /*padding: 10px;*/
   height: 10%;
   display: flex;
   align-items: baseline;
@@ -508,7 +509,6 @@ a {
   width: 100%;
   flex-direction: row;
   text-align: left;
-  /*list-style-type: none;*/
   text-decoration: none;
 }
 .propos {
@@ -567,6 +567,7 @@ a {
   .btn {
     height: 40px;
     width: 50%;
+    justify-content: center;
   }
   .btn i {
     display: none;
@@ -823,8 +824,6 @@ a {
     width: 100%;
     height: 86px;
   }
-  /*.rechercher i {
-  }*/
   .formu {
     width: 100%;
     align-items: center;
@@ -857,6 +856,9 @@ a {
     background-color: #0065fc;
     border: 0;
     border-radius: 10px;
+  }
+  .textbtn {
+    display: none;
   }
   .rechercher i {
     color: black;
@@ -896,9 +898,6 @@ a {
     margin-right: 77px;
     margin-top: 20px;
   }
-  /*.info {
-    margin-top: 135px;
-  }*/
   .info i {
     font-size: 25px;
     height: 34px;
@@ -953,7 +952,6 @@ a {
     height: 28%;
     background-color: white;
     border-radius: 40px;
-    /* border: 3px solid white;*/
   }
   .carte_image {
     display: flex;
@@ -1002,7 +1000,6 @@ a {
   .carte1 {
     height: 15%;
     width: 88%;
-    /*align-content: space-around;*/
     border: 3px solid #f2f2f2;
     border-radius: 40px;
   }
