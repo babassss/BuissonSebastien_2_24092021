@@ -117,7 +117,7 @@ input {
   font-size: 16px;
   margin-left: 5px;
 }
-.submit {
+.btn {
   width: 50%;
   background-color: #0065fc;
   color: white;
@@ -126,6 +126,12 @@ input {
   border-radius: 0px 20px 20px 0px;
   height: 60px;
   font-weight: bold;
+  font-size: 16px;
+}
+.btn p {
+  display: flex;
+  justify-content: center;
+  margin-top: -25px;
 }
 .search {
   width: 80%;
@@ -144,7 +150,7 @@ input {
 .choix_filtres {
   width: auto;
   height: 30px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid grey;
   border-radius: 55px 55px;
   padding: 10px 20px 10px 0px;
   display: flex;
@@ -334,8 +340,8 @@ h6 {
   height: 100%;
   font-size: 80%;
 }
-.etoilegrise {
-  color: #f2f2f2;
+.etoile-grise {
+  color: grey;
 }
 .cartedescriptionpop {
   display: grid;
@@ -558,8 +564,17 @@ a {
     width: 100%;
     height: 40px;
   }
-  .submit {
+  .btn {
     height: 40px;
+    width: 50%;
+  }
+  .btn i {
+    display: none;
+  }
+  .btn p {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
   }
 
   /**************************************
@@ -806,7 +821,7 @@ a {
   }
   .rechercher {
     width: 100%;
-    height: 70px;
+    height: 86px;
   }
   /*.rechercher i {
   }*/
@@ -815,15 +830,15 @@ a {
     align-items: center;
   }
   .localisation {
-    height: 50px;
-    width: 50px;
+    height: 68px;
+    width: 68px;
   }
   .localisation i {
     height: 50%;
     width: 50%;
   }
   input {
-    font-size: 40px;
+    font-size: 50px;
   }
   .submit {
     height: 40px;
@@ -837,61 +852,57 @@ a {
     width: 85%;
   }
   .btn {
-    height: 70px;
-    width: 10%;
+    height: 87px;
+    width: 11%;
     background-color: #0065fc;
     border: 0;
-    /* line-height: 2.5;
-    padding: 0 20px;
-    font-size: 20px;
-    text-align: center;
-    text-shadow: 1px 1px 1px #000;*/
     border-radius: 10px;
   }
   .rechercher i {
     color: black;
     display: flex;
-    margin-left: 10px;
+    margin-left: 14px;
+    margin-top: 10px;
   }
   #filters {
     width: 100%;
     /*flex: 1 0 100%;*/
-    height: 76px;
+    height: 90px;
   }
   .filtres {
-    height: 170px;
+    height: 400px;
     justify-content: flex-start;
+    margin-top: 0;
   }
   .filtres p {
     font-size: 44px;
   }
   .cercle {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
   .cercle i {
     justify-content: center;
-    padding-left: 5px;
+    padding-left: 12px;
     align-items: baseline;
-    height: 5px;
-    width: 5px;
+    height: 28px;
+    width: 30px;
     justify-content: space-between;
-    padding-top: 4px;
+    padding-top: 14px;
   }
   .choix_filtres {
-    height: 40px;
+    height: 60px;
     margin-left: 0;
-    margin-left: 20px;
     margin-right: 77px;
     margin-top: 20px;
   }
-  .info {
+  /*.info {
     margin-top: 135px;
-  }
+  }*/
   .info i {
     font-size: 25px;
-    height: 40px;
-    width: 50px;
+    height: 34px;
+    width: 43px;
   }
   /*****************************************************
   ***********************Container**********************
