@@ -222,29 +222,32 @@ input {
 ********************************/
 h1 {
   width: auto;
-  margin-left: 3%;
   margin-top: 40px;
-  margin-bottom: 45px;
+  margin-bottom: 26px;
   height: 27px;
 }
 h2 {
-  margin-left: 10%;
+  margin-left: 34px;
   margin-right: auto;
   margin-top: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   height: 27px;
 }
 h3 {
-  width: auto;
-  margin-left: 0px;
+  margin-top: 40px;
+  font-size: 28px;
   margin-bottom: 25px;
+  margin-bottom: -8px;
 }
-h4,
-h5,
-h6 {
+h4 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 27px;
+}
+h5 {
   margin-top: 50px;
   margin-bottom: 0px;
-  font-size: 20px;
+  font-size: 27px;
 }
 /*********************************************************
 *******************IDCONTAINER***************************
@@ -292,7 +295,6 @@ h6 {
   justify-content: space-around;
 }
 .popu i {
-  margin-right: 30px;
   color: black;
   font-size: 20px;
 }
