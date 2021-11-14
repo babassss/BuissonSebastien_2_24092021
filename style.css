@@ -236,7 +236,6 @@ h2 {
 h3 {
   margin-top: 40px;
   font-size: 28px;
-  margin-bottom: 25px;
   margin-bottom: -8px;
 }
 h4 {
@@ -664,10 +663,17 @@ a {
   }
   h2 {
     width: auto;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-top: 40px;
     margin-bottom: 45px;
     height: 27px;
+  }
+  h3 {
+    margin-right: 60%;
+    margin-left: 20px;
+  }
+  h4 {
+    margin-left: 40px;
   }
   .container_carte1 {
     font-size: 12px;
@@ -919,11 +925,15 @@ a {
     margin-right: 77px;
     margin-top: 20px;
   }
+  .info {
+    align-items: baseline;
+  }
   .info i {
     font-size: 25px;
     height: 34px;
     width: 43px;
   }
+
   /*****************************************************
   ***********************Container**********************
   *****************************************************/
@@ -953,14 +963,38 @@ a {
     height: 100%;
     border-radius: 0;
   }
-  h2 {
-    width: 55%;
-    margin-left: 5%;
+  /*****************************************************
+  ***************************Titres*********************
+  *****************************************************/
+  h1 {
+    margin-left: 0%;
     margin-top: 50px;
     margin-bottom: 45px;
-    height: 70px;
+    height: 128px;
+    font-size: 58px;
+  }
+  h2 {
+    width: auto;
+    margin-left: 5%;
+    margin-top: 50px;
+    margin-bottom: 0;
+    height: 80px;
     font-size: 54px;
   }
+  h3 {
+    height: 120px;
+    margin-left: 58px;
+    margin-bottom: 50px;
+    width: auto;
+    margin-right: auto;
+    font-size: 54px;
+  }
+  h4 {
+    font-size: 54px;
+  }
+  /*****************************************************
+  ******************************************************
+  *****************************************************/
   .container_carte1 {
     display: flex;
     flex-direction: column;
@@ -1005,14 +1039,14 @@ a {
     height: 100%;
     background-color: white;
   }
-  h1 {
+  /*h1 {
     width: 70%;
     margin-left: 6%;
     margin-top: 50px;
     margin-bottom: 45px;
     height: 70px;
     font-size: 54px;
-  }
+  }*/
   .container_carte {
     display: flex;
     flex-direction: center;
